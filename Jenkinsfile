@@ -10,9 +10,10 @@ stages {
                    
 		   branch 'master'; 
 		   }
-	           beforeAgent true
+	          
 		   
                    steps {
+			    beforeAgent true
 		   echo 'Hello World'
                    script {			    	
                    if ("${env.GIT_BRANCH}" == "master") {
