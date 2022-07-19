@@ -1,5 +1,5 @@
 env.environment =""
-env.browserName= "firefox"
+properties([pipelineTriggers([githubPush()])])
 
 pipeline {
 agent any 
