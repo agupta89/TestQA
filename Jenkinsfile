@@ -1,5 +1,5 @@
 env.environment =""
-properties([pipelineTriggers([githubPush()])])
+properties([[$class: 'JiraProjectProperty'], [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([[$class: 'PeriodicFolderTrigger', interval: '1m']])])
 
 pipeline {
 agent any 
