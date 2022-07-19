@@ -7,8 +7,8 @@ agent any
 stages {
         stage('Checkout Code..') {
 		when {
-                   anyOf { 
-		   branch 'master'; branch 'stg' ; 
+                   
+		   branch 'master'; 
 		   }
 	           beforeAgent true
 		   }
