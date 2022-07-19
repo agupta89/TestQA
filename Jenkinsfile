@@ -17,7 +17,7 @@ stages {
                    script {			    	
                    if ("${env.GIT_BRANCH}" == "master") {
                    env.environment = "dev"
-		    } else if("${env.GIT_BRANCH}" == "stg"){
+		    } else if("${env.GIT_BRANCH}" == "STG"){
                    env.environment = "stg"
 		    } else {
                     env.environment = "false"
