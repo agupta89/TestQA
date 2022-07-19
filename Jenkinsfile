@@ -1,5 +1,5 @@
 env.environment =""
-properties([[$class: 'JiraProjectProperty'], [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([[$class: 'PeriodicFolderTrigger', interval: '1m']])])
+properties([[$class: 'JiraProjectProperty'], [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([[$class: 'PeriodicFolderTrigger', interval: '10m']])])
 
 pipeline {
 agent any 
