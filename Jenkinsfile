@@ -8,7 +8,7 @@ stages {
         stage('Checkout Code..') {
 		when {
                    
-		   branch 'master'; 
+		   branch 'main'; 
 		   }
 	          
 		   
