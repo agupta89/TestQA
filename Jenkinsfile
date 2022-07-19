@@ -11,7 +11,7 @@ stages {
 		   branch 'master'; 
 		   }
 	           beforeAgent true
-		   }
+		   
                    steps {
 		   echo 'Hello World'
                    script {			    	
