@@ -1,5 +1,5 @@
 env.environment =""
-properties([pipelineTriggers([githubPush()])])
+
 
 
 pipeline {
