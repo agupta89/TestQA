@@ -9,7 +9,7 @@ stages {
         stage('Checkout Code..') {
 		when {
                    anyOf { 
-		   branch 'master'; branch 'stg' ; 
+		   branch 'master'; branch 'STG' ; 
 		   }
 	           beforeAgent true
 		   }
