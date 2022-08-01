@@ -15,7 +15,10 @@ stages {
 		   }
                    steps {
 		   echo 'Hello World'
-                   script {			    	
+			    echo env.GIT_BRANCH
+			   
+                   script {	
+			   env.branch = "${env.GIT_BRANCH}"
                    if ("${env.GIT_BRANCH}" == "master") {
                    env.environment = "dev"
 		    } else if("${env.GIT_BRANCH}" == "STG"){
@@ -24,7 +27,7 @@ stages {
                     env.environment = "false"
                    }
 		    echo env.environment
-		    checkout([$class: 'GitSCM', branches: [[name: 'master']],doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/agupta89/TestDev.git']]])
+		    checkout([$class: 'GitSCM', branches: [[name: env.branch]],doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/agupta89/TestDev.git']]])
                     
                 }
 		  		
