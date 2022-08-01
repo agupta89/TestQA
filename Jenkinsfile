@@ -14,7 +14,7 @@ stages {
 	           beforeAgent true
 		   }
                    steps {
-		   echo 'Hello Worl'
+		   echo 'Hello World'
                    script {			    	
                    if ("${env.GIT_BRANCH}" == "master") {
                    env.environment = "dev"
